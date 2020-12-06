@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import 'antd/dist/antd.css';
-import { Table, Tag, Space } from 'antd';
+import { Table} from 'antd';
 import VenadosService from '../services/venados.service'
+import "./stadistics.css"
 
 
 const Stadistics = () => {

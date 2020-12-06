@@ -1,0 +1,48 @@
+
+.ant-modal-body{
+    width: 100%;
+    padding: 0;
+
+}
+
+.ant-modal-confirm .ant-modal-body {
+    padding: 0;
+    
+}
+
+.ant-modal-confirm-content{
+    
+    padding: 0;
+
+}
+
+.ant-modal-confirm-body .ant-modal-confirm-content {
+    margin:0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns {
+    float: right;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.ant-btn-primary{
+
+background-color: white !important;
+color: black;
+border: white;
+}
+
+span{
+    color:black;
+}
+
+.modalUp{
+    background-color: darkslategray;
+    height: 240px;
+    padding-top: 5%;
+    color: white;
+
+}

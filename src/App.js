@@ -14,23 +14,19 @@ const App = ()=> {
 
   return (
     <div className="App">
-        <Layout className="layout" style={{ minHeight: "100vh"  }}  >
-          
+        <Layout style={{minHeight: "100vh"}}>
           <HeaderDrawer/>
-        
-        <Content style={{ padding: "0 0", backgroundColor:"white" }}>
+        <Content className="contentLayout" >
           <div className="site-layout-content">
             <Switch >
               <Route exact path="/" component={Container} />
               <Route exact path="/stadistics" component={Stadistics} />
               <Route exact path="/gamers" component={Gamers} />
             </Switch>
-           
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>WebApp Venados FC</Footer>
+        <Footer className="footerLayout">WebApp Venados FC</Footer>
       </Layout>
-      
     </div>
   );
 }

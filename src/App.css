@@ -1,45 +1,16 @@
-.ant-layout-header{
-  background-color: white;
+.layout{
+  min-height: 100vh 
 }
 
-
-.hideOnMobile {
-  display: none;
-  width: 100%;
-}
-@media only screen and (min-width: 568px) {
-  .hideOnMobile {
-    display: block;
-  }
+.contentLayout{
+  padding: 0 0;
+  background-color:white
 }
 
-.hideOnDesktop {
-  display: block;
-
-}
-@media only screen and (min-width: 568px) {
-  .hideOnDesktop {
-    display: none;
-  }
-}
-
-
-.ant-table-thead > tr >th{
+.footerLayout{
+  text-align: center;
+  background-color:rgb(1, 153, 1) !important ;
   color: white !important;
-  background: #505050 !important;
-  font-size: 11px !important;
-  font-weight: 500 !important;
-}
-
-
-.ant-table-tbody{
-  color: white;
-  background: #6db462 !important;
-  font-size: 18px !important;
-
-  }
-
-.ant-table-tbody>tr:hover{
-  color: black;
-  font-weight: 500;
+  height: 50px;
+  padding: 1% !important;
 }

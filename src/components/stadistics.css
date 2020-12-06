@@ -1,0 +1,23 @@
+
+
+
+.ant-table-thead > tr >th{
+    color: white !important;
+    background: #505050 !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+  }
+  
+  
+  .ant-table-tbody{
+    color: white;
+    background: rgb(1, 153, 1) !important;
+    font-size: 18px !important;
+  
+    }
+  
+  .ant-table-tbody>tr:hover{
+    color: black;
+    font-weight: 500;
+  }
+  

@@ -1,3 +1,41 @@
-tr{
-    background-color: teal;
-}
+
+.hideOnMobile {
+    display: none;
+    width: 100%;
+  }
+  @media only screen and (min-width: 568px) {
+    .hideOnMobile {
+      display: block;
+    }
+  }
+  
+  .hideOnDesktop {
+    display: block;
+  
+  }
+  @media only screen and (min-width: 568px) {
+    .hideOnDesktop {
+      display: none;
+    }
+  }
+
+  .ant-layout-header{
+    background-color: white;
+    color: rgb(1, 153, 1) !important;
+  }
+  
+  .nav-link{
+    color: rgb(1, 153, 1) !important;
+  }
+  
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: #c0f7c0 !important;
+    border: none;
+  }
+  
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+     border-bottom: 2px solid #01910d; 
+  }
+  
+
+

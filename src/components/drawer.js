@@ -5,10 +5,11 @@ import LogoVenados from "./../assets/Venadosfc.png";
 import "antd/dist/antd.css";
 import { Layout, Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
-import "../App.css";
+import "./drawer.css";
 const { Header } = Layout;
 
 const HeaderDrawer = () => {
+    
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => setToggled(!isToggled);
   const onClose = () => {
@@ -57,6 +58,7 @@ const HeaderDrawer = () => {
 
       <Header
         mode="inline"
+        className="headerAnt"
         style={{ textAlign: "left", padding:0, backgroundColor: "white" }}
       >
         <div style={{ width: "100%" }} className="hideOnDesktop">
