@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from "react-router-dom";
+import Container from './components/home'
+import Stadistics from './components/stadistics'
+import Gamers from './components/gamers'
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
+import React from "react";
+import HeaderDrawer from './components/drawer';
+const { Content, Footer } = Layout;
 
-function App() {
+const App = ()=> {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Layout className="layout" style={{ minHeight: "100vh"  }}  >
+          
+          <HeaderDrawer/>
+        
+        <Content style={{ padding: "0 0", backgroundColor:"white" }}>
+          <div className="site-layout-content">
+            <Switch >
+              <Route exact path="/" component={Container} />
+              <Route exact path="/stadistics" component={Stadistics} />
+              <Route exact path="/gamers" component={Gamers} />
+            </Switch>
+           
+          </div>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>WebApp Venados FC</Footer>
+      </Layout>
+      
     </div>
   );
 }
