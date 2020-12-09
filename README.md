@@ -23,8 +23,9 @@ Ya instaladas ejecutamos `npm start` para correr el proyecto en nuestro local pa
 
 ### Vistas Escritorio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Home
+
+![home](https://i.ibb.co/V98vXfS/Home-Escritorio.png)
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
