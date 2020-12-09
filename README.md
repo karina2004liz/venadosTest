@@ -21,17 +21,40 @@ Ya instaladas ejecutamos `npm start` para correr el proyecto en nuestro local pa
  **=> "react-js-pull-to-refresh": "^1.2.2",
 
 
-### Vistas Escritorio
+# Vistas Escritorio
 
 ## Home
 
 ![home](https://i.ibb.co/V98vXfS/Home-Escritorio.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estadisticas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![estadisticas](https://i.ibb.co/PTHT6yg/Estadisticas-Escritorio.png)
 
-### Vistas Móvil
+## Jugadores
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![jugadores](https://i.ibb.co/6Y3RrWW/Gamers-Escritorio.png)
+
+### Jugadores Modal
+
+![jugadoresM](https://i.ibb.co/H4dhMz1/Gamers-MEscritorio.png)
+
+
+# Vistas Móvil
+
+## Home
+
+![homeMovil](https://i.ibb.co/T2Hj7MM/Home-Movil.png)
+
+## Estadisticas
+
+![estadisticasMovil](https://i.ibb.co/jh0sXjX/Estadisticas-Movil.png)
+
+## Jugadores
+
+![jugadoresMovil](https://i.ibb.co/Kx43bj6/Gamers-Movil.png)
+
+### Jugadores Modal
+
+![jugadoresMMovil](https://i.ibb.co/4VXZ6SS/Gamers-MMovil.png)
+
