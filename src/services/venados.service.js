@@ -1,10 +1,10 @@
 const API_URL = "https://venados.dacodes.mx/api";
 
+const getDataMovies = "https://api.themoviedb.org/3/movie/now_playing?api_key=634b49e294bd1ff87914e7b9d014daed&language=en-US"
+
 const getGames = () => {
 
-return fetch(API_URL + "/games", { method: "GET", headers: {
-    "Accept": "application/json",
-  }}).then(
+return fetch(getDataMovies, { method: "GET"}).then(
     handleResponse
   );
 };

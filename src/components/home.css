@@ -34,3 +34,11 @@
     color: rgb(1, 153, 1)
 
 }
+
+.individualInfo{
+    margin:5%;
+    -webkit-box-shadow: 7px 10px 31px -14px rgba(44,166,3,0.48);
+    -moz-box-shadow: 7px 10px 31px -14px rgba(44,166,3,0.48);
+    box-shadow: 7px 10px 31px -14px rgba(44,166,3,0.48);
+    border-radius: 1rem;
+}
