@@ -42,3 +42,26 @@
     box-shadow: 7px 10px 31px -14px rgba(44,166,3,0.48);
     border-radius: 1rem;
 }
+
+.pullRefresh{
+    height: 48vh;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.gridContent{
+    display: grid;
+    align-items: center;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+
+}
+
+@media screen and (max-width: 400px) {
+
+.pullRefresh{
+    height: 38vh;
+    overflow-y: scroll;
+    text-align: center;
+}
+    
+}

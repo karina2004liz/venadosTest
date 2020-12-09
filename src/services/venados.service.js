@@ -68,10 +68,12 @@ function handleResponse(response) {
   });
 }
 
-export default {
+ const VenadosService = {
   getGames,
   getNotifications,
   getPlayers,
   getStadistics,
   getSponsors
 };
+
+export default VenadosService

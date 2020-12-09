@@ -11,22 +11,21 @@ const { Content, Footer } = Layout;
 
 const App = ()=> {
 
-
   return (
     <div className="App">
         <Layout style={{minHeight: "100vh"}}>
           <HeaderDrawer/>
-        <Content className="contentLayout" >
-          <div className="site-layout-content">
-            <Switch >
-              <Route exact path="/" component={Container} />
-              <Route exact path="/stadistics" component={Stadistics} />
-              <Route exact path="/gamers" component={Gamers} />
-            </Switch>
-          </div>
-        </Content>
-        <Footer className="footerLayout">WebApp Venados FC</Footer>
-      </Layout>
+            <Content className="contentLayout" >
+              <div className="site-layout-content">
+                <Switch >
+                  <Route exact path="/" component={Container} />
+                  <Route exact path="/stadistics" component={Stadistics} />
+                  <Route exact path="/gamers" component={Gamers} />
+                </Switch>
+              </div>
+            </Content>
+          <Footer className="footerLayout">WebApp Venados FC</Footer>
+        </Layout>
     </div>
   );
 }

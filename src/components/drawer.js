@@ -35,7 +35,7 @@ const HeaderDrawer = () => {
           defaultSelectedKeys={["1"]}
         >
           <center>
-            <img src={LogoVenados} style={{ width: 200 }}></img>
+            <img alt="Logo Venados" src={LogoVenados} style={{ width: 200 }}></img>
           </center>
 
           <Menu.Item key="1">
@@ -78,7 +78,7 @@ const HeaderDrawer = () => {
           mode="horizontal"
           defaultSelectedKeys={["1"]}
         >
-          <img src={LogoVenados} style={{ width: 50 }}></img>
+          <img alt="VenadosLogo" src={LogoVenados} style={{ width: 50 }}></img>
           <Menu.Item key="1">
             <Link to={"/"} className="nav-link">
               Home

@@ -1,74 +1,46 @@
 import React, { useEffect, useState } from "react";
 import 'antd/dist/antd.css';
 import { Table} from 'antd';
-import VenadosService from '../services/venados.service'
+import VenadosServices from '../services/venados.service'
 import "./stadistics.css"
-
 
 const Stadistics = () => {
 
     const [stadistics, setStadistics] = useState([])
 
     useEffect(()=>{
-        VenadosService.getStadistics().then((data)=>{
-            console.log(data)
-        })
-    })
-
-
-    
-const columns = [
-    {
-      title: 'Tabla General',
-      dataIndex: 'name',
-      key: 'name',
-    },
-    {
-      title: 'JJ',
-      dataIndex: 'age',
-      key: 'age',
-    },
-    {
-      title: 'DG',
-      dataIndex: 'address',
-      key: 'address',
-    },
-    {
-        title: 'PTS',
-        dataIndex: 'address',
-        key: 'address',
-      }
-  ];
-
-  const data = [
-    {
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 6,
-      
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 6,
-      
-    },
-    {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 6,
-    },
-  ];
-
+      VenadosServices.getGames().then((data) => {
+        setStadistics(data.results)
+      });
+    },[])
+ 
+    const columns = [
+      {
+        title: 'Título',
+        dataIndex: 'title',
+        key: 'title',
+      },
+      {
+        title: 'Popularidad',
+        dataIndex: 'popularity',
+        key: 'popularity',
+      },
+      {
+        title: 'Promedio de votos',
+        dataIndex: 'vote_average',
+        key: 'vote_average',
+      },
+      {
+          title: 'Votos',
+          dataIndex: 'vote_count',
+          key: 'vote_count',
+        }
+    ];
 
     return(
-        <div>
-           <Table pagination={false} columns={columns} dataSource={data} />
+        <div className="screenScroll" >
+           <Table pagination={false} columns={columns} dataSource={stadistics} />
         </div>
-    
     )
 }
 

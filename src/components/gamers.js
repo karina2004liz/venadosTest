@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 import { Avatar } from "antd";
-import VenadosService from "../services/venados.service";
-import { AntDesignOutlined } from "@ant-design/icons";
+import VenadosServices from "../services/venados.service";
 import { Modal } from "antd";
 import "./gamers.css";
 
 const Gamers = () => {
   const [gamers, setGamers] = useState([]);
 
-  useEffect(() => {
-    VenadosService.getPlayers().then((data) => {
-      console.log(data);
+  useEffect(()=>{
+    VenadosServices.getGames().then((data) => {
+      setGamers(data.results)
     });
-  }, []);
+  },[])
 
   const openInfoGamer = (data) => {
     return Modal.info({
@@ -24,16 +23,18 @@ const Gamers = () => {
           <div className="modalUp">
             <center>
               <h2 style={{ color: "white" }}>FICHA TÉCNICA</h2>
-              <Avatar size={100} icon={<AntDesignOutlined />} />
-              <p>{data.lastName}</p>
+              <Avatar size={100} src={`https://image.tmdb.org/t/p/w500${data.poster_path}`} />
+              <p>{data.title}</p>
+              <p>{data.release_date}</p>
             </center>
           </div>
           <center>
-            <h3>FECHA DE NACIMIENTO</h3>
-            <h3>LUGAR DE NACIMIENTO</h3>
-            <h3>PESO</h3>
-            <h3>ALTURA</h3>
-            <h3>EQUIPO ANTERIOSR</h3>
+            <h4>POPULARIDAD</h4>
+            <p><b>{data.popularity}</b></p>
+            <h4>PROMEDIO DE VOTOS</h4>
+            <p><b>{data.vote_average}</b></p>
+            <h4>VOTOS</h4>
+            <p><b>{data.vote_count}</b></p>
           </center>
         </div>
       ),
@@ -41,39 +42,35 @@ const Gamers = () => {
     });
   };
 
-  const employees = [
-    { firstName: "John", lastName: "Doe" },
-    { firstName: "Anna", lastName: "Smith" },
-    { firstName: "Peter", lastName: "Jones" },
-  ];
 
   return (
-    <center>
+    <center >
       <h1>Jugadores</h1>
-      {employees.map((element) => {
-        return (
-          <div
-            onClick={() => {
-              openInfoGamer(element);
-              console.log(element);
-            }}
-            style={{ width: "33%", float: "left" }}
-          >
-            <Avatar
-              size={{
-                xs: 70,
-                sm: 80,
-                md: 100,
-                lg: 120,
-                xl: 160,
-                xxl: 200,
-              }}
-              icon={<AntDesignOutlined />}
-            />
-            <p>{element.firstName}</p>
-          </div>
-        );
-      })}
+      <div  style={{ width:"90%", display:"grid", alignItems:"center", gridTemplateColumns:"repeat(auto-fit, minmax(110px, 1fr))"}}>
+        { gamers.map((element) => {
+          return (
+              <div
+                style={{margin:"5%", height:150}}
+                onClick={() => {
+                openInfoGamer(element);
+                }} 
+              >     
+                <Avatar
+                  size={{
+                    xs: 80,
+                    sm: 80,
+                    md: 80,
+                    lg: 90,
+                    xl: 100,
+                    xxl: 100,
+                  }}
+                  src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
+                />               
+                <p>{element.title}</p>
+              </div>
+            );
+        })}
+      </div>
     </center>
   );
 };
