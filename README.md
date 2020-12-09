@@ -46,6 +46,10 @@ Ya instaladas ejecutamos `npm start` para correr el proyecto en nuestro local pa
 
 ![homeMovil](https://i.ibb.co/T2Hj7MM/Home-Movil.png)
 
+## Menú 
+
+![menu](https://i.ibb.co/Gcrz09V/Menu-Movil.png)
+
 ## Estadisticas
 
 ![estadisticasMovil](https://i.ibb.co/jh0sXjX/Estadisticas-Movil.png)
