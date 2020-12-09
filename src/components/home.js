@@ -21,7 +21,6 @@ const Home = () => {
 
   useEffect(() => {
     VenadosServices.getGames().then((data) => {
-      console.log(data.results);
       setGames(data.results);
     });
   }, []);
